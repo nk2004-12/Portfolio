@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;         
+      width: 100%;
+      background-image: url('image/13.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .buy-btn {
+      background: #000;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      font-weight: bold;
+
+    }
+
+    .tagline {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .subtext {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+
+
+
+
+    .socials a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #000;
+
+    }
+
+    .about {
+      padding: 60px 50px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .about-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .about-gallery img {
+      width: 200px;
+      height: auto;
+    }
+
+    .collection {
+      padding: 60px 50px;
+      text-align: center;
+    }
+
+    .collection h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .collection-images {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .collection-images img {
+      width: 250px;
+    }
+
+    .pagination {
+      margin-top: 30px;
+      font-size: 18px;
+      letter-spacing: 10px;
+    }
+
+    #last {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    #last img {
+      width: 50%;
+      height: 60%;
+    }
+
+    .parents {
+      display: flex;
+      justify-content: space-between;
+      gap: 6vh;
+    }
+
+    .skills {
+      height: 37vh;
+      width: 30vw;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 22.5px;
+      box-shadow: inset 5px 0px 20px 0px rgb(201, 0244, 244);
+    }
+
+    .js {
+      height: 37vh;
+      width: 30vw;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 22.5px;
+      box-shadow: inset 5px 0px 20px 0px rgb(201, 0244, 244);
+
+    }
+
+    .react {
+      height: 37vh;
+      width: 30vw;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 22.5px;
+      box-shadow: inset 5px 0px 20px 0px rgb(201, 0244, 244);
+      text-align: center;
+
+    }
+    .skills:hover,
+    .js:hover,
+    .react:hover{
+      transition: 0.5s all ease  ;
+      transform: scale(1.1);
+    }
+
+    .js1 {
+      color: rgb(45, 50, 50);
+      font-weight: lighter;
+      padding-top: 4.8vh;
+      text-align: center;
+      transition: 0.5s all ease  ;
+      transform: scale(1.1);
+    }
+    @media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .tagline {
+    font-size: 18px;
+  }
+  .about h2 {
+    font-size: 24px;
+  }
+  .parents {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills, .js, .react {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    padding: 15px 30px;
+  }
+  nav ul {
+    gap: 15px;
+  }
+  .hero h1 {
+    font-size: 44px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  .about h2 {
+    font-size: 28px;
+  }
+  .parents {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills, .js, .react {
+    width: 80%;
+    height: auto;
+    margin-bottom: 25px;
+  }
+}
+
+/* Laptops (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+  nav ul {
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 52px;
+  }
+  .tagline {
+    font-size: 22px;
+  }
+  .about h2 {
+    font-size: 30px;
+  }
+  .parents {
+    flex-direction: row;
+    gap: 4vh;
+  }
+  .skills, .js, .react {
+    width: 28vw;
+    height: auto;
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  header {
+    padding: 20px 50px;
+  }
+  nav ul {
+    gap: 25px;
+  }
+  .hero h1 {
+    font-size: 60px;
+  }
+  .tagline {
+    font-size: 24px;
+  }
+  .about h2 {
+    font-size: 32px;
+  }
+  .parents {
+    flex-direction: row;
+    gap: 6vh;
+  }
+  .skills, .js, .react {
+    width: 30vw;
+    height: 37vh;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <script>
+    function goTo(link) {
+      window.location.href = link;
+    }
+  </script>
+
+  <header>
+
+
+    <div class="logo"></div>
+
+    <nav>
+      <ul>
+        <li><a onclick="goTo('index.html#page1')" href="#">HOME</a></li>
+        <li><a href="https://docs.google.com/document/d/1FihgF35h_hjBlfi7Go36TPqw_W2Ma3oT/edit?usp=drive_link&ouid=105816364143063088944&rtpof=true&sd=true">CV</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    </div>
+
+    
+
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>SKILLS</h2>
+    <div class="parents">
+      <div class="skills">
+        <h2 class="js1">HTML</h2>
+        <p>
+          I have learned HTML and CSS to build clean, responsive, and modern web pages.
+          With these skills, I can design layouts, style elements, and create user‑friendly
+          interfaces that bring ideas to life on the web.
+        </p>
+      </div>
+      <div class="js">
+        <h2 class="js1">REACT JS</h2>
+         <p>
+    I have learned React JS and Tailwind CSS to build fast, responsive, and modern web applications. 
+    With React, I create dynamic components and smooth user experiences, while , customizable interfaces with minimal effort.
+  </p>
+      </div>
+      <div class="react">
+        <h2 class="js1">REACT GSAP</h2>
+          <p>
+    I have learned React JS and GSAP to build interactive, animated web applications. 
+    With React, I create dynamic components and , while GSAP 
+    helps me add powerful motion effects that make designs come alive.
+  </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Collection Section  -->
+  <!-- <section class="collection">
+    <h2>CONTACT LINKS</h2>
+    <div class="collection-images">
+
+    <div class="socials">
+  <a href="https://www.instagram.com/" target="_blank">
+    <i style="font-size: 40px;" class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com/" target="_blank">
+    <i style="font-size: 40px;" class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="https://facebook.com/" target="_blank">
+    <i style="font-size: 40px;" class="fa-brands fa-facebook"></i>
+  </a>
+</div>
+
+    </div>
+  </section> -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
